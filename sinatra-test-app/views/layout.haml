@@ -5,7 +5,7 @@
     %title Bienvenido a mi sitio de pruebas
     %link{:type => "text/css", :rel => "stylesheet", :media => "screen", :href => "/stylesheet.css" }
 
-  -#%body{ :onload => "document.getElementById('number').select()"}
+  %body{ :onload => "document.getElementById('number').select()"}
   %body
     #wrapper
       %h1 Bienvenido a to_words!
@@ -35,5 +35,5 @@
             %input{ :type => "text", :name => "number", :value => "Ingresa el numero aqui", :id => "number"}
             %input{ :type => "submit", :value => "Enviar" }
       #page_contents
-        = yield
+        -#= yield
 

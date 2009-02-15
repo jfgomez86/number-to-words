@@ -1,0 +1,61 @@
+body, h1, h2 {
+  font-family: monaco, lucida console, verdana;
+  font-size: 13px;
+  margin: 0;
+  padding: 0; }
+
+h1 {
+  font-size: 1.8em;
+  font-weight: 800;
+  color: #444444; }
+
+#wrapper {
+  width: 798px;
+  margin-left: auto;
+  margin-right: auto;
+  border: 1px solid #555555;
+  padding: 3px 10px; }
+
+#welcome_message {
+  float: left;
+  width: 450px;
+  margin: 0 5px; }
+
+#vote_list_link {
+  text-align: center;
+  margin-top: 35px; }
+  #vote_list_link a {
+    text-decoration: none; }
+    #vote_list_link a:hover span {
+      background-color: #a3b8cc; }
+    #vote_list_link a:visited {
+      color: #777777; }
+    #vote_list_link a span {
+      padding: 15px;
+      font-size: 1.25em;
+      border-width: 2px;
+      border-color: #333333;
+      border-style: solid; }
+
+#example {
+  clear: both; }
+
+#vote_list {
+  border-collapse: collapse;
+  margin: 2.5em auto; }
+  #vote_list th {
+    text-align: center;
+    border: 1px dotted #cccccc;
+    background: #efefef;
+    color: #4f4f4f; }
+  #vote_list td {
+    border: 1px dotted #cccccc;
+    text-align: center; }
+  #vote_list .voto {
+    width: 50px; }
+  #vote_list .number {
+    text-align: right;
+    width: 100px; }
+  #vote_list .to_words {
+    text-align: left;
+    width: 600px; }

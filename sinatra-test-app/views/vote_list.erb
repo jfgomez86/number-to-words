@@ -1,0 +1,20 @@
+<div id='vote_list_container'>
+  <div id='vote_table'>
+    <table id='vote_list'>
+      <tbody>
+        <tr class='vote_table_header'>
+          <th>Numero</th>
+          <th>Voto</th>
+          <th>to_words</th>
+        </tr> 
+        <% for vote in @votes %>
+          <tr <%= "class=vote#{vote[:vote]} id=n_#{vote[:number]}" %>>
+            <td class="number"><%= vote[:number] %></td>
+            <td class="vote"><%= vote[:vote] %></td>
+            <td class="to_words"><%= vote[:number].to_i.to_words %></td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+  </div>
+</div>

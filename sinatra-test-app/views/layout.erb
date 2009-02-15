@@ -1,0 +1,49 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+  <head>
+    <title>Bienvenido a mi sitio de pruebas</title>
+    <link href='/stylesheet.css' media='screen' rel='stylesheet' type='text/css' />
+  </head>
+  <body onload="document.getElementById('number').select()">  </body>
+  <body>
+    <div id='wrapper'>
+      <h1>Bienvenido a to_words!</h1>
+      <div id='welcome_message'>
+        <p>El proposito de este sitio es probar una aplicacion. La forma en que me puedes ayudar es escribiendo un    numero en el formulario de abajo y verificando que    la salida del programa sea la correcta.</p>
+      </div>
+      <div id='vote_list_link'>
+        <a href='/vote/list'>
+          <span>
+            Ver lista de votos
+          </span>
+        </a>
+      </div>
+      <div id='example'>
+        <span>Ejemplo:</span>
+        <code>
+          <span>
+            <b>Entrada:</b>
+            <span>1234567</span>
+            <b>Salida:</b>
+            <span>un millon doscientos treinta y cuatro mil quinientos sesenta y siete.</span>
+          </span>
+        </code>
+      </div>
+      <div id='application'>
+        <div id='number_to_words_form'>
+          <form action='/to_words/' method='post'>
+            <label for='number'>
+              Numero:
+            </label>
+            <input id='number' name='number' type='text' value='Ingresa el numero aqui' />
+            <input type='submit' value='Enviar' />
+          </form>
+        </div>
+      </div>
+      <div id='page_contents'>
+        <%= yield %>
+      </div>
+    </div>
+  </body>
+</html>

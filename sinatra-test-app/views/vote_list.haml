@@ -6,9 +6,9 @@
           %th Numero
           %th Voto
           %th to_words
-        - for vote in @votes
-          %tr{:class => "voto_#{vote[:vote]}", :id => "n_#{vote[:number]}"}
-            %td.number= vote[:number]
-            %td.vote= vote[:vote]
-            %td.to_words= vote[:number].to_i.to_words
+        -#- for vote in @votes
+          -#%tr{:class => "voto_#{vote[:vote]}", :id => "n_#{vote[:number]}"}
+            -#%td.number= vote[:number]
+            -#%td.vote= vote[:vote]
+            -#%td.to_words= vote[:number].to_i.to_words
 

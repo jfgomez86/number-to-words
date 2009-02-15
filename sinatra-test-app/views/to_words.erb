@@ -1,0 +1,33 @@
+<div id='original_number'>
+  <span>
+    <b>Entrada:</b>
+    <%= @number %>
+  </span>
+</div>
+<div id='to_words'>
+  <span>
+    <b>Salida:</b>
+    <%= @number.to_i.to_words.capitalize %>
+  </span>
+</div>
+<% if @can_vote %>
+  <div id="vote_container">
+    <div id="vote_form">
+      <form method="post" action="/vote/">
+        <span>¿Es correcto el resultado?</span>
+        <span>Si:</span>
+        <input type="radio" value="si" name="vote_option" checked="checked"/>
+        <span>No:</span>
+        <input type="radio" value="no" name="vote_option"/>
+        <input type="submit" value="Enviar"/>
+        <input type="hidden" value="<%= @number %>" name="number"/>
+      </form>
+    </div>
+  </div>
+<% else %>
+  <div id='already_voted_container'>
+    <span>
+      <b>Ya existe un voto por este numero.</b>
+    </span>
+  </div>
+<% end %>
