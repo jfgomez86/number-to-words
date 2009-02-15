@@ -48,7 +48,8 @@ class Integer
   }
 
   def to_words
-    digits = self.to_s.split("").count
+    # size instead of count, it seems heroku doesn't support count
+    digits = self.to_s.split("").size 
     if self < 31
       return "" if self == 0
       return WORDS_HASH[self.to_s]
