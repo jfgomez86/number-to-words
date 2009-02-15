@@ -1,3 +1,8 @@
+!table_border_color = #cccccc
+!table_header_color = #efefef
+!h1_color = #444444
+!wrapper_color = #555555
+
 body, h1, h2
   :font
     :family monaco, lucida console, verdana
@@ -9,14 +14,14 @@ h1
   :font
     :size 1.8em
     :weight 800
-  :color #444444
+  :color = !h1_color
 
 #wrapper
   :width 798px
   :margin
     :left auto
     :right auto
-  :border 1px solid #555555
+  :border = 1px solid !wrapper_color
   :padding 3px 10px
   
 #welcome_message
@@ -33,6 +38,8 @@ h1
     &:hover span
       :background
         :color #a3b8cc
+    &:visited
+      :color #777777
 
     span
       :padding 15px
@@ -40,11 +47,28 @@ h1
         :size 1.25em
       :border
         :width 2px
-        :color #777777
+        :color #333333
         :style solid
 
-    
 #example
   :clear both
 
-
+#vote_list
+  :border-collapse collapse
+  :margin 2.5em auto
+  th
+    :text-align center
+    :border = 1px dotted !table_border_color
+    :background = !table_header_color
+    :color #4f4f4f 
+  td
+    :border =  1px dotted !table_border_color
+    :text-align center
+  .voto
+    :width 50px 
+  .number
+    :text-align right
+    :width 100px
+  .to_words
+    :text-align left
+    :width 600px

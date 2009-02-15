@@ -1,4 +1,4 @@
-require 'number_to_code'
+require File.join(File.dirname(__FILE__), 'number_to_code.rb')
 require 'test/unit'
 
 class TestNumberToWords < Test::Unit::TestCase

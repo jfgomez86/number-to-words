@@ -8,7 +8,7 @@
           %th to_words
         - for vote in @votes
           %tr{:class => "voto_#{vote[:vote]}", :id => "n_#{vote[:number]}"}
-            %td= vote[:number]
-            %td= vote[:vote]
-            %td= vote[:number].to_i.to_words
+            %td.number= vote[:number]
+            %td.vote= vote[:vote]
+            %td.to_words= vote[:number].to_i.to_words
 
