@@ -1,0 +1,14 @@
+#vote_list_container
+  #vote_table
+    %table{:id => "vote_list"}
+      %tbody
+        %tr{ :class => 'vote_table_header' }
+          %th Numero
+          %th Voto
+          %th to_words
+        - for vote in @votes
+          %tr{:class => "voto_#{vote[:vote]}", :id => "n_#{vote[:number]}"}
+            %td= vote[:number]
+            %td= vote[:vote]
+            %td= vote[:number].to_i.to_words
+

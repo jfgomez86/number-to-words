@@ -1,0 +1,39 @@
+!!! XML
+!!!
+%html
+  %head
+    %title Bienvenido a mi sitio de pruebas
+    %link{:type => "text/css", :rel => "stylesheet", :media => "screen", :href => "/stylesheet.css" }
+
+  -#%body{ :onload => "document.getElementById('number').select()"}
+  %body
+    #wrapper
+      %h1 Bienvenido a to_words!
+      #welcome_message
+        %p El proposito de este sitio es probar una aplicacion. |
+        La forma en que me puedes ayudar es escribiendo un    |
+        numero en el formulario de abajo y verificando que    |
+        la salida del programa sea la correcta. |
+      #vote_list_link
+        %a{:href => "/vote/list" }
+          %span
+            Ver lista de votos
+      #example
+        %span Ejemplo:
+        %code
+          %span
+            %b Entrada:
+            %span 1234567
+            %b Salida:
+            %span un millon doscientos treinta y cuatro mil quinientos |
+            sesenta y siete. |
+      #application
+        #number_to_words_form
+          %form{ :method => "post", :action => "/to_words/" }
+            %label{:for => "number",}
+              Numero:
+            %input{ :type => "text", :name => "number", :value => "Ingresa el numero aqui", :id => "number"}
+            %input{ :type => "submit", :value => "Enviar" }
+      #page_contents
+        = yield
+

@@ -1,0 +1,25 @@
+--- 
+- :number: "1"
+  :vote: si
+  :created_at: 2009-02-15 14:33:31.976505 -05:00
+- :number: "1234565"
+  :vote: si
+  :created_at: 1234727483
+- :number: "1000000"
+  :vote: si
+  :created_at: 1234727657
+- :number: "8973"
+  :vote: si
+  :created_at: 1234728794
+- :number: "23456"
+  :vote: si
+  :created_at: 1234729122
+- :number: "23456"
+  :vote: si
+  :created_at: 1234729131
+- :number: "88989"
+  :vote: si
+  :created_at: 1234730101
+- :number: "566"
+  :vote: si
+  :created_at: 1234732548

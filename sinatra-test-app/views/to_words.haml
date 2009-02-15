@@ -1,0 +1,23 @@
+#original_number
+  %span 
+    %b Entrada:
+    = @number
+#to_words
+  %span 
+    %b Salida:
+    = @number.to_i.to_words.capitalize
+- if @can_vote
+  #vote_container
+    #vote_form
+      %form{ :method => "post", :action => "/vote/" }
+        %span ¿Es correcto el resultado?
+        %span Si:
+        %input{ :type => "radio", :name => "vote_option", :value => "si", :checked => true }
+        %span No:
+        %input{ :type => "radio", :name => "vote_option", :value => "no" }
+        %input{ :type => "submit", :value => "Enviar" }
+        %input{ :type => "hidden", :name => "number", :value => @number } 
+- else
+  #already_voted_container
+    %span 
+      %b Ya existe un voto por este numero.
