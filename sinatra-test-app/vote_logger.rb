@@ -26,7 +26,7 @@ class VoteLogger
   end
 
   def self.get_votes
-    if @@dont_write
+    unless @@dont_write
       load_previous_results
     else
       @@vote_results
