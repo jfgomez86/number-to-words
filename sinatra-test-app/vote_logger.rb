@@ -26,7 +26,11 @@ class VoteLogger
   end
 
   def self.get_votes
-    load_previous_results
+    if @@dont_write
+      load_previous_results
+    else
+      @@vote_results
+    end
   end
 
   private
@@ -36,7 +40,7 @@ class VoteLogger
       @@vote_results = YAML.load_file(@@vote_results_file)
     else
       @@dont_write = true
-      @@vote_results |= []
+      @@vote_results = []
     end
   end
 
