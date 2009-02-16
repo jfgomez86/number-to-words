@@ -56,6 +56,12 @@ class TestNumberToWords < Test::Unit::TestCase
     assert_equal "trescientos cuarenta y seis", 346.to_words
     assert_equal "ciento cuarenta y ocho", 148.to_words
 
+    assert_equal "mil uno", 1001.to_words
+    assert_equal "mil doscientos noventa y uno", 1291.to_words
+    assert_equal "mil novecientos noventa y nueve", 1999.to_words
+    assert_equal "dos mil novecientos", 2900.to_words
+    assert_equal "mil veintiuno", 1021.to_words
+
     assert_equal "seiscientos sesenta y tres mil", 663000.to_words
     assert_equal "ochocientos setenta y seis mil", 876000.to_words
     assert_equal "quinientos sesenta y ocho mil", 568000.to_words

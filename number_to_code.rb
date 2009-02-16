@@ -62,6 +62,7 @@ class Integer
       return (self/100*100).to_words + " " + (self % 100).to_words
     elsif self < 1000000
       return "mil" if self == 1000
+      return "mil " + (self % 1000).to_words if self < 2000
       return (self/1000).to_words + " mil" if self % 1000 == 0
       return (self/1000).to_words + " mil " + (self % 1000).to_words 
     else
