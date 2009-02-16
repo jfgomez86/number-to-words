@@ -2,6 +2,7 @@
 !table_header_color = #efefef
 !h1_color = #444444
 !wrapper_color = #555555
+!error_background = #ff9c9c
 
 body, h1, h2
   :font
@@ -72,3 +73,8 @@ h1
   .to_words
     :text-align left
     :width 600px
+#error_container
+  :position relative
+  :float right
+  :top 0px
+  :background !error_background

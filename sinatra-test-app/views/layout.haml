@@ -9,6 +9,12 @@
   %body
     #wrapper
       %h1 Bienvenido a to_words!
+      #notice_container
+        %span{ :id => "notice_span" }
+          = Flash.check(:notice)
+      #error_container
+        %span{ :id => "error_span" }
+          = Flash.check(:error)
       #welcome_message
         %p El proposito de este sitio es probar una aplicacion. |
         La forma en que me puedes ayudar es escribiendo un    |

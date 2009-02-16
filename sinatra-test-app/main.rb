@@ -1,10 +1,11 @@
 require 'rubygems'
 require 'sinatra'
+require File.join(File.dirname(__FILE__), 'flash.rb')
 require File.join(File.dirname(__FILE__), 'vote_logger.rb')
 require File.join(File.dirname(__FILE__), '../number_to_code.rb')
 @haml = false
 
-get '/' do
+get '/' do 
   if @haml 
     haml :index
   else
@@ -22,12 +23,18 @@ post '/to_words/' do
 end
 
 get '/to_words/:number' do
-  @number = params[:number]
-  @can_vote = !VoteLogger.already_voted?(@number)
-  if @haml
-    haml :to_words
-  else
-    erb :to_words
+  begin
+    @number = params[:number]
+    @can_vote = !VoteLogger.already_voted?(@number)
+    raise TypeError unless @number.to_s.match(/^\d+$/)
+    if @haml
+      haml :to_words
+    else
+      erb :to_words
+    end
+  rescue
+    Flash.set(:error, "¡Error! Debes escribir un numero entero.")
+    redirect "/"
   end
 end
 
@@ -54,3 +61,4 @@ get '/vote/list' do
 end
 
 VoteLogger.start
+Flash.start

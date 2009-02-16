@@ -37,6 +37,7 @@ class VoteLogger
 
   def self.load_previous_results
     if File.writable? @@vote_results_file 
+      @@dont_write = false
       @@vote_results = YAML.load_file(@@vote_results_file)
     else
       @@dont_write = true

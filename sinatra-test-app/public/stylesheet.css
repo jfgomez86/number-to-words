@@ -59,3 +59,8 @@ h1 {
   #vote_list .to_words {
     text-align: left;
     width: 600px; }
+  #error_container {
+    position:relative;
+    float: right;
+    top:0px;
+    background:#ff9c9c; }

@@ -9,6 +9,9 @@
   <body>
     <div id='wrapper'>
       <h1>Bienvenido a to_words!</h1>
+      <div id="error_container">
+        <span id="error_span"><%= Flash.check(:error) %></span>
+      </div>
       <div id='welcome_message'>
         <p>El proposito de este sitio es probar una aplicacion. La forma en que me puedes ayudar es escribiendo un    numero en el formulario de abajo y verificando que    la salida del programa sea la correcta.</p>
       </div>

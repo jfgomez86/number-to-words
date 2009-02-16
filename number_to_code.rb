@@ -44,7 +44,7 @@ class Integer
     "600" => "seiscientos",
     "700" => "setecientos",
     "800" => "ochocientos",
-    "900" => "novecientos",
+    "900" => "novecientos"
   }
 
   def to_words
@@ -78,3 +78,4 @@ class Integer
     self.to_s.reverse.gsub(/(\d\d\d)(?=\d)(?!\d*\.)/,'\1,').reverse
   end
 end 
+
